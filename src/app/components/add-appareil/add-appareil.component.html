@@ -1,0 +1,30 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Identifiant</label>
+        <input type="text" class="form-control" id="inputEmail4" placeholder="Identifiant" name="identifiant"  [(ngModel)]="appareil.identifiant"  #identifiant="ngModel">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Modele</label>
+        <input type="text" class="form-control" id="inputPassword4" placeholder="Modele" name="modele"  [(ngModel)]="appareil.modele"  #modele="ngModel" >
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCity">Prix</label>
+        <input type="number" class="form-control" id="inputCity" name="prix"  [(ngModel)]="appareil.prix"  #prix="ngModel">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState">Etat</label>
+        <select id="inputState" class="form-control" name="etat"  [(ngModel)]="appareil.etat"  #etat="ngModel">
+          <option selected>Choose...</option>
+          <option Value="disponible">Disponible</option>
+          <option value="reserve">Reserve</option>
+          <option value="vendu">Vendu</option>
+        </select>
+      </div>
+ 
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ajouter</button>
+  </form>

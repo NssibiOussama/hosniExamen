@@ -1,0 +1,21 @@
+<div class="table-responsive text-nowrap">
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th>Identifiant</th>
+          <th>Modele</th>
+          <th>Prix</th>
+          <th>Etat</th>
+        </tr>
+      </thead>
+      <tbody class="table-border-bottom-0" *ngFor="let app of appareils">
+        <tr>
+          <td>{{app.identifiant}}</td>
+          <td>{{app.modele}}</td>
+          <td>{{app.prix}}</td>
+          <td>{{app.etat}}</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
